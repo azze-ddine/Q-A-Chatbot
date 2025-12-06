@@ -1,0 +1,1529 @@
+{
+  "intents": [
+    {
+      "tag": "intro_angular",
+      "patterns": [
+        "What is Angular?",
+        "Explain Angular",
+        "Define Angular framework",
+        "Angular overview"
+      ],
+      "responses": [
+        "Angular is a front-end framework for building Single Page Applications (SPA) using TypeScript and components. It organizes apps with modules, components, services, directives and pipes.",
+        "Angular (2+) is a component-based framework written with TypeScript that helps build SPAs with routing, dependency injection, and a rich CLI."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "spa_definition",
+      "patterns": [
+        "What is a SPA?",
+        "Explain Single Page Application",
+        "What does SPA mean?"
+      ],
+      "responses": [
+        "A SPA (Single Page Application) is a web app that loads a single HTML page (index.html) and dynamically updates content using JavaScript—often fetching JSON via HTTP to update the view without full page reloads."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "typescript_role",
+      "patterns": [
+        "Why TypeScript with Angular?",
+        "Do I need TypeScript for Angular?",
+        "What is TypeScript?"
+      ],
+      "responses": [
+        "TypeScript is recommended for Angular because it provides static typing, classes, interfaces, and modern JS features. Angular applications are typically written in TypeScript and transpiled to JavaScript."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_protocol",
+      "patterns": [
+        "Explain HTTP protocol",
+        "What methods HTTP supports?",
+        "HTTP methods list"
+      ],
+      "responses": [
+        "HTTP is the protocol for client-server communication. Common methods: GET (read), POST (create/submit), PUT (update/upload), DELETE (remove), HEAD (header info). Status codes like 200, 404, 500 indicate request results."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_status_codes",
+      "patterns": [
+        "What is HTTP 200?",
+        "Explain 404 and 500",
+        "Common HTTP status codes"
+      ],
+      "responses": [
+        "200 OK means the request succeeded. 201 Created: resource created. 301/302: redirect. 400: bad request. 401: unauthorized. 403: forbidden. 404: not found. 500: server error."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "install_node",
+      "patterns": [
+        "How to install Node.js?",
+        "Install Node",
+        "Node download"
+      ],
+      "responses": [
+        "Download Node.js from https://nodejs.org and install it. Node includes npm (Node Package Manager) used to install Angular CLI and other packages."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "install_angular_cli",
+      "patterns": [
+        "How to install Angular CLI?",
+        "npm install -g @angular/cli",
+        "Install ng cli"
+      ],
+      "responses": [
+        "Install Angular CLI globally with: `npm install -g @angular/cli`. Use `ng` commands to create, build, serve and test Angular projects."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ng_new",
+      "patterns": [
+        "How to create a new Angular project?",
+        "ng new command",
+        "Create Angular app"
+      ],
+      "responses": [
+        "Use `ng new ProjectName` to generate a new Angular project with a scaffolded structure and install dependencies. Then go into the folder and run `ng serve`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ng_serve",
+      "patterns": [
+        "How to run Angular app locally?",
+        "ng serve command",
+        "Start Angular dev server"
+      ],
+      "responses": [
+        "Run `ng serve` from the project root. It compiles TypeScript to JavaScript and starts a dev server at `http://localhost:4200` by default."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "project_structure",
+      "patterns": [
+        "Explain Angular project structure",
+        "What files are in an Angular project?",
+        "index.html main.ts app.module.ts"
+      ],
+      "responses": [
+        "Typical structure: `src/index.html` (boot page), `main.ts` (bootstraps AppModule), `app/` (contains components, services, modules), `app.module.ts` (root module)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "app_module",
+      "patterns": [
+        "What is AppModule?",
+        "Explain app.module.ts",
+        "What does @NgModule do?"
+      ],
+      "responses": [
+        "@NgModule decorates a module class and has metadata: `declarations` (components, directives, pipes), `imports` (other modules), `providers` (services), `bootstrap` (root component). AppModule is the root module bootstrapped by main.ts."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ngmodule_properties",
+      "patterns": [
+        "What are NgModule properties?",
+        "declarations imports providers bootstrap exports"
+      ],
+      "responses": [
+        "Important @NgModule properties: `declarations` registers components/directives/pipes; `imports` brings other modules; `providers` registers service providers; `bootstrap` names the root component; `exports` exposes components to other modules."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_definition",
+      "patterns": [
+        "What is a component in Angular?",
+        "Explain @Component",
+        "How to create a component"
+      ],
+      "responses": [
+        "A component is a class with an `@Component` decorator that defines a selector, template (or templateUrl) and styleUrls. Use `ng generate component Name` to scaffold a component."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_selector_types",
+      "patterns": [
+        "What selectors can be used?",
+        "Selector as attribute or class",
+        "How to use component selector"
+      ],
+      "responses": [
+        "Selectors can be element (`selector: 'app-about'` → `<app-about></app-about>`), attribute (`selector: '[app-about]'` → `<div app-about></div>`), or class (`selector: '.app-about'` → `<div class=\"app-about\"></div>`)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_template",
+      "patterns": [
+        "template vs templateUrl",
+        "How to set component HTML",
+        "inline template"
+      ],
+      "responses": [
+        "`template` allows inline HTML in the decorator. `templateUrl` points to an external HTML file. Prefer `templateUrl` for larger templates and `template` for very small inline templates."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_example",
+      "patterns": [
+        "Show example component",
+        "sample app.component.ts",
+        "app.component example"
+      ],
+      "responses": [
+        "Example:\n```ts\nimport { Component } from '@angular/core';\n@Component({ selector: 'app-root', templateUrl: './app.component.html' })\nexport class AppComponent { title = 'app'; }\n```"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "declarations_usage",
+      "patterns": [
+        "Where to declare components?",
+        "Why add components to declarations?",
+        "component not part of any NgModule"
+      ],
+      "responses": [
+        "Components, directives, and pipes must be listed in a module's `declarations` array. If you forget, Angular throws a 'component is not part of any NgModule' error."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "data_binding",
+      "patterns": [
+        "What is data binding?",
+        "Explain interpolation property binding event binding",
+        "Two way binding ngModel"
+      ],
+      "responses": [
+        "Data binding lets you communicate between the component class and template: Interpolation `{{value}}`, Property binding `[src]`, Event binding `(click)`, and Two-way binding `[(ngModel)]`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ngmodel_import",
+      "patterns": [
+        "How to use ngModel?",
+        "ngModel not working",
+        "Import FormsModule for ngModel"
+      ],
+      "responses": [
+        "To use `[(ngModel)]` import `FormsModule` in your module: `import { FormsModule } from '@angular/forms';` and add `FormsModule` to `imports` in your NgModule."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "property_binding",
+      "patterns": [
+        "What is property binding?",
+        "How to bind attributes in Angular",
+        "[property] binding example"
+      ],
+      "responses": [
+        "Property binding uses square brackets: `<img [src]=\"imageUrl\">`. It sets DOM element properties from component values."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "event_binding",
+      "patterns": [
+        "What is event binding?",
+        "How to handle clicks in template",
+        "(click) handler"
+      ],
+      "responses": [
+        "Event binding uses parentheses: `<button (click)=\"doSomething()\">Click</button>`. It calls component methods on DOM events."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "two_way_binding",
+      "patterns": [
+        "What is two way binding?",
+        "How to use [(ngModel)]",
+        "Two-way binding example"
+      ],
+      "responses": [
+        "Two-way binding combines property and event binding: `[(ngModel)]=\"value\"`. It requires `FormsModule` and syncs input and component model."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ngfor",
+      "patterns": [
+        "How to iterate list in template",
+        "*ngFor usage",
+        "ngFor example"
+      ],
+      "responses": [
+        "Use `*ngFor=\"let item of items\"` to create repeated elements. Example: `<li *ngFor=\"let c of comments\">{{c.message}}</li>`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ngif",
+      "patterns": [
+        "How to conditionally show elements",
+        "*ngIf example",
+        "Use ngIf"
+      ],
+      "responses": [
+        "Use `*ngIf=\"condition\"` to include/exclude elements. You can use `else` with `<ng-template #name>...</ng-template>` for alternatives."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "directives_definition",
+      "patterns": [
+        "What are directives?",
+        "Explain Angular directives",
+        "Types of directives"
+      ],
+      "responses": [
+        "Directives are classes that add behavior to templates. Types: components (with template), structural directives (`*ngIf`, `*ngFor`) that change DOM layout, and attribute directives (e.g. `ngClass`, `ngStyle`) that change element appearance/behavior."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "pipes_definition",
+      "patterns": [
+        "What are pipes?",
+        "How to format date in template",
+        "Use pipe in Angular"
+      ],
+      "responses": [
+        "Pipes transform displayed values in templates. Example: `{{ dateValue | date:'dd/MM/yyyy' }}`. You can write custom pipes for formatting."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "services_definition",
+      "patterns": [
+        "What is an Angular service?",
+        "Explain services",
+        "Service vs component"
+      ],
+      "responses": [
+        "A service is a class (often annotated with `@Injectable`) that provides reusable logic, data access, or utilities. Components consume services via dependency injection (DI)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "injectable_decorator",
+      "patterns": [
+        "What does @Injectable do?",
+        "How to create a service",
+        "Injectable decorator explained"
+      ],
+      "responses": [
+        "`@Injectable()` marks a class as available to Angular's DI system so that it can be injected into constructors. It allows you to define providers at module or component level."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "register_service_providers",
+      "patterns": [
+        "How to provide a service globally",
+        "Add service to providers",
+        "providers array usage"
+      ],
+      "responses": [
+        "To provide a service application-wide, add it to the root module `providers` array or use `providedIn: 'root'` in the `@Injectable()` decorator (recommended)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "dependency_injection",
+      "patterns": [
+        "What is dependency injection?",
+        "Explain DI in Angular",
+        "How DI works"
+      ],
+      "responses": [
+        "DI is a pattern where the framework injects required service instances into components. Angular's injector manages a container of service instances, creating them on demand and reusing singletons as configured."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_module",
+      "patterns": [
+        "How to make HTTP requests in Angular",
+        "HttpClient usage",
+        "Import HttpClientModule"
+      ],
+      "responses": [
+        "Import `HttpClientModule` from `@angular/common/http` in your NgModule imports. Use `HttpClient` injected into services to perform `get`, `post`, `put`, `delete` requests returning Observables."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_example",
+      "patterns": [
+        "Show HttpClient service example",
+        "How to use HttpClient in a service",
+        "HttpClient get example"
+      ],
+      "responses": [
+        "Example:\n```ts\n@Injectable()\nexport class ApiService { constructor(private http: HttpClient) {}\n getItems(){ return this.http.get('/api/items'); }\n}\n```"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "observables_definition",
+      "patterns": [
+        "What are Observables?",
+        "Explain RxJS Observables",
+        "Difference between Promise and Observable"
+      ],
+      "responses": [
+        "Observables (from RxJS) represent streams of async data. Unlike Promises, Observables can emit multiple values over time and support operators (map, filter, catch) for composition."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "subscribe_usage",
+      "patterns": [
+        "How to subscribe to an Observable",
+        ".subscribe example",
+        "Observables subscribe usage"
+      ],
+      "responses": [
+        "Call `.subscribe()` on the Observable: `this.api.getItems().subscribe(data => this.items = data, err => console.error(err));`. Remember to manage subscriptions to avoid memory leaks (unsubscribe or use async pipe)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "async_pipe",
+      "patterns": [
+        "What is async pipe?",
+        "How to use | async",
+        "Use async pipe with observables"
+      ],
+      "responses": [
+        "The `async` pipe in templates subscribes to an Observable or Promise and returns the latest value, automatically unsubscribing when the component is destroyed. Example: `{{ items$ | async }}`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "routing_definition",
+      "patterns": [
+        "What is Angular Router?",
+        "Explain routing",
+        "How to navigate between pages"
+      ],
+      "responses": [
+        "Angular Router maps URLs to components, enabling navigation between views without page reload. Configure routes with `Routes` and `RouterModule.forRoot(routes)`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "route_config",
+      "patterns": [
+        "How to configure routes",
+        "Route example about contacts",
+        "RouterModule.forRoot example"
+      ],
+      "responses": [
+        "Define routes: `const routes: Routes = [{ path: 'about', component: AboutComponent }, { path: '', redirectTo: '/about', pathMatch: 'full' }];` then import `RouterModule.forRoot(routes)` in the module."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "routerlink",
+      "patterns": [
+        "How to link routes in template",
+        "Use routerLink",
+        "<a [routerLink]>"
+      ],
+      "responses": [
+        "Use `[routerLink]=\"['/about']\"` or `routerLink=\"/about\"` on anchors or buttons to navigate declaratively. Example: `<button routerLink=\"/contacts\">Contacts</button>`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "router_outlet",
+      "patterns": [
+        "What is <router-outlet>?",
+        "Where do routes render?",
+        "router-outlet explanation"
+      ],
+      "responses": [
+        "`<router-outlet></router-outlet>` is a placeholder in a template where routed components are rendered by the Router based on the current URL."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "route_params",
+      "patterns": [
+        "Route parameters example",
+        "How to read :id from route",
+        "ActivatedRoute snapshot params"
+      ],
+      "responses": [
+        "Use `ActivatedRoute` to read route parameters: `this.id = +this.route.snapshot.params['id'];` or subscribe to `this.route.params` for dynamic changes."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "lazy_loading",
+      "patterns": [
+        "What is lazy loading?",
+        "How to lazy load modules",
+        "LoadChildren example"
+      ],
+      "responses": [
+        "Lazy loading splits app modules and loads them when the route is visited using `loadChildren`. Configure separate feature modules and reference them in the routes to reduce initial bundle size."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "forms_template_driven",
+      "patterns": [
+        "Template-driven forms",
+        "How to create forms with ngModel",
+        "Template driven vs reactive forms"
+      ],
+      "responses": [
+        "Template-driven forms use `ngModel` in templates and `FormsModule`. They're simpler for small forms. Reactive forms use `FormGroup`, `FormControl`, and `FormBuilder` from `@angular/forms` and are more scalable and testable."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "forms_reactive",
+      "patterns": [
+        "Reactive forms example",
+        "How to use FormGroup",
+        "FormBuilder usage"
+      ],
+      "responses": [
+        "Reactive forms use `FormGroup` and `FormControl`. Example:\n```ts\nthis.form = this.fb.group({ name: ['', Validators.required] });\n``` where `fb` is `FormBuilder` injected into the component."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "form_validation",
+      "patterns": [
+        "How to validate forms",
+        "Validators required minLength",
+        "Show validation errors"
+      ],
+      "responses": [
+        "Use validators like `Validators.required`, `Validators.minLength`. Check `form.controls.name.invalid` and `form.controls.name.touched` in the template to show errors. For template-driven, use `ngModel` and template variables like `#name=\"ngModel\"`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "pipes_builtin",
+      "patterns": [
+        "List built-in pipes",
+        "Use date pipe number currency",
+        "Angular pipes list"
+      ],
+      "responses": [
+        "Built-in pipes include `date`, `uppercase`, `lowercase`, `currency`, `number`, `percent`, `json`. Use them as `{{ value | date:'shortDate' }}`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "create_custom_pipe",
+      "patterns": [
+        "How to create a custom pipe",
+        "Write my own pipe",
+        "Pipe transform example"
+      ],
+      "responses": [
+        "Create a pipe with `@Pipe({name:'myPipe'})` and implement `PipeTransform` with a `transform(value: any, ...args: any[])` method. Declare the pipe in a module's `declarations`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "animations_intro",
+      "patterns": [
+        "How to add animations",
+        "Angular animations example",
+        "trigger state transition animate"
+      ],
+      "responses": [
+        "Angular animations are provided by `@angular/animations`. Use `trigger`, `state`, `transition`, and `animate` in component metadata and import `BrowserAnimationsModule` in the app module."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "testing_jasmine_karma",
+      "patterns": [
+        "How to test Angular apps",
+        "Unit tests with Jasmine and Karma",
+        "ng test"
+      ],
+      "responses": [
+        "Angular uses Jasmine and Karma by default. Tests go in `.spec.ts` files. Run `ng test` to execute unit tests with Karma and view results in the browser."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "build_production",
+      "patterns": [
+        "How to build for production",
+        "ng build --prod",
+        "Optimize Angular app"
+      ],
+      "responses": [
+        "Use `ng build --prod` (or `ng build --configuration production`) to create an optimized production build (minification, Ahead-of-Time compilation depending on Angular CLI version)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "deploy_app",
+      "patterns": [
+        "How to deploy Angular app",
+        "Deploy to server",
+        "Where to put dist folder"
+      ],
+      "responses": [
+        "After `ng build`, deploy the `dist/your-app-name` folder to any static hosting or web server. Configure server to always serve `index.html` for client-side routes (fallback) to let the Angular router handle URLs."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "add_bootstrap",
+      "patterns": [
+        "How to add Bootstrap to Angular",
+        "Install bootstrap npm",
+        "Include CSS in angular.json or angular-cli.json"
+      ],
+      "responses": [
+        "Install Bootstrap: `npm install --save bootstrap@3` (or v4/5). Add the path to bootstrap.css in `angular.json` (or `.angular-cli.json` for older CLI) under `styles` so Angular includes it in the build."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_communication",
+      "patterns": [
+        "How components communicate",
+        "Parent to child input",
+        "Child to parent output"
+      ],
+      "responses": [
+        "Parent to child: use `@Input()` properties. Child to parent: use `@Output()` with an `EventEmitter`. Example: `<child [data]=\"parentData\" (changed)=\"onChanged($event)\"></child>`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "lifecycle_hooks",
+      "patterns": [
+        "List Angular lifecycle hooks",
+        "ngOnInit ngOnDestroy",
+        "When to use ngOnInit"
+      ],
+      "responses": [
+        "Common lifecycle hooks: `ngOnInit` (initialization), `ngOnChanges` (input changes), `ngDoCheck`, `ngAfterViewInit`, `ngOnDestroy` (cleanup). Use `ngOnInit` to perform component initialization logic."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "module_separation",
+      "patterns": [
+        "Why create feature modules",
+        "Create routing module",
+        "app-routing.module.ts purpose"
+      ],
+      "responses": [
+        "Feature modules help modularize the app and enable lazy loading. A dedicated routing module (e.g. `AppRoutingModule`) centralizes routes and keeps AppModule cleaner."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_error_handling",
+      "patterns": [
+        "Handle HTTP errors",
+        "HttpClient catchError example",
+        "Show error message on HTTP failure"
+      ],
+      "responses": [
+        "Use RxJS `catchError` and `pipe` to catch and handle errors in services. Example: `this.http.get(url).pipe(catchError(err => { console.error(err); return throwError(err); }));`"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_headers",
+      "patterns": [
+        "Send HTTP headers",
+        "Authorization header example",
+        "HttpHeaders usage"
+      ],
+      "responses": [
+        "Use `new HttpHeaders({'Authorization': 'my-token'})` and pass it to `http.get(url, { headers })` or `http.post(url, body, { headers })` to send custom headers."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "jwt_auth",
+      "patterns": [
+        "How to implement JWT authentication",
+        "Store JWT token after login",
+        "Angular authentication with token"
+      ],
+      "responses": [
+        "After login, store the JWT token (e.g. in `localStorage`) and add it to Authorization headers for subsequent requests. Use an `AuthService` to manage login/logout and an `HttpInterceptor` to attach the token automatically."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_interceptor",
+      "patterns": [
+        "What is HttpInterceptor",
+        "How to intercept requests",
+        "Add token with interceptor"
+      ],
+      "responses": [
+        "An `HttpInterceptor` intercepts HTTP requests/responses. Create a class implementing `HttpInterceptor`, add logic to clone the request and add headers, then provide it in the module using `HTTP_INTERCEPTORS` multi provider."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "pixabay_example",
+      "patterns": [
+        "Explain the Pixabay example",
+        "How the image search app works",
+        "pixabay API example"
+      ],
+      "responses": [
+        "The Pixabay app queries `https://pixabay.com/api/?key=API_KEY&q=keyword&per_page=5&page=1`. The component calls a service or `Http` to fetch JSON, then renders `images.hits` with `*ngFor`. Pagination is handled by changing `page` and re-fetching."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contacts_app_arch",
+      "patterns": [
+        "Describe the Contacts app",
+        "Contacts app architecture",
+        "Contacts front end back end"
+      ],
+      "responses": [
+        "The Contacts app has a Spring Boot backend exposing REST endpoints and an Angular frontend. The Angular app uses services to call `/contacts`, displays a list, shows detail, creates new contacts, and deletes contacts using HTTP methods."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contacts_service_example",
+      "patterns": [
+        "Show ContactService code",
+        "How to fetch /contacts",
+        "contacts.service.ts example"
+      ],
+      "responses": [
+        "Example (old Http):\n```ts\ngetAllContacts(){ return this.http.get('http://localhost:8080/contacts').map(resp => resp.json()); }\n``` For modern HttpClient replace `.map(resp => resp.json())` with typed `this.http.get<Contact[]>('/contacts')`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_detail_example",
+      "patterns": [
+        "How does detailContact work?",
+        "Route to detailContact/:id",
+        "DetailContactComponent usage"
+      ],
+      "responses": [
+        "The component reads `id` from `ActivatedRoute`, calls a service to fetch the contact by id, and displays fields such as name, email and photo. Navigation uses `this.router.navigate(['/detailContact', id])`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "image_click_detail",
+      "patterns": [
+        "How to show image detail on click",
+        "detailImage method",
+        "Show full image from list"
+      ],
+      "responses": [
+        "Use a click handler `(click)=\"detailImage(im)\"` to set `currentImage = im` and switch a `mode` flag to `'DETAIL'` so the template shows the detail view."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "rxjs_map",
+      "patterns": [
+        "What does map operator do",
+        "Use rxjs map with http",
+        "map vs pipe map"
+      ],
+      "responses": [
+        "RxJS `map` transforms observable emissions. In modern RxJS use `pipe(map(...))`. With HttpClient you typically pipe and map the response to the needed shape."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_versions",
+      "patterns": [
+        "Angular 1 vs Angular 2+",
+        "What changed from AngularJS",
+        "Differences AngularJS and Angular"
+      ],
+      "responses": [
+        "AngularJS (1.x) uses MVC and plain JavaScript. Angular (2+) is a full rewrite using TypeScript, components, and a modular architecture with DI and improved performance."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "upgrade_angular",
+      "patterns": [
+        "How to upgrade Angular version",
+        "Upgrade Angular CLI",
+        "Update Angular app"
+      ],
+      "responses": [
+        "Use `ng update` and the Angular Update Guide for version-specific instructions. Update dependencies in `package.json` and run `npm install`. Some breaking changes may require code updates."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_cli_commands",
+      "patterns": [
+        "List common ng commands",
+        "ng generate ng build ng serve",
+        "what can ng do"
+      ],
+      "responses": [
+        "Common CLI commands: `ng new`, `ng serve`, `ng build`, `ng test`, `ng generate component|service|module`, `ng lint`, `ng add`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ng_generate_component",
+      "patterns": [
+        "ng generate component syntax",
+        "Create component using CLI",
+        "ng g c MyComp"
+      ],
+      "responses": [
+        "Use `ng generate component component-name` or `ng g c name`. It creates component files and declares the component in the closest module."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ng_generate_service",
+      "patterns": [
+        "ng generate service",
+        "Create service using CLI",
+        "ng g s Auth"
+      ],
+      "responses": [
+        "Use `ng generate service service-name` or `ng g s name`. It scaffolds a service class and a `.spec.ts` test file."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "old_http_vs_httpclient",
+      "patterns": [
+        "What is HttpModule vs HttpClientModule",
+        "Difference between @angular/http and @angular/common/http",
+        "Which http to use"
+      ],
+      "responses": [
+        "Use `HttpClientModule` from `@angular/common/http`. The old `@angular/http` is deprecated. HttpClient returns typed Observables and has better features like interceptors."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_headers_auth",
+      "patterns": [
+        "Add Authorization header to http request",
+        "httpclient add headers",
+        "send token in headers"
+      ],
+      "responses": [
+        "Use `this.http.get(url, { headers: new HttpHeaders({ 'Authorization': token }) })` or implement an `HttpInterceptor` to attach the token automatically to each request."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "observable_operators",
+      "patterns": [
+        "Common rxjs operators",
+        "use map filter catchError",
+        "rxjs pipe usage"
+      ],
+      "responses": [
+        "Common operators: `map`, `filter`, `switchMap`, `mergeMap`, `concatMap`, `take`, `debounceTime`, `catchError`. Use `observable.pipe(map(...), catchError(...))` to compose."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "unsubscribe_management",
+      "patterns": [
+        "How to avoid memory leaks",
+        "unsubscribe observables",
+        "takeUntil usage"
+      ],
+      "responses": [
+        "Unsubscribe from subscriptions in `ngOnDestroy` or use the `async` pipe or operators like `takeUntil`/`take(1)` to auto-complete. For long-lived observables, always manage subscriptions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "http_pagination",
+      "patterns": [
+        "How to implement pagination",
+        "Paginate results from API",
+        "pages array example"
+      ],
+      "responses": [
+        "Request a page parameter from server (`page`, `per_page`) and compute total pages from `totalHits` / `pageSize`. Build a `pages` array and call the API with the selected `page` index."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "image_preview_click",
+      "patterns": [
+        "How to open preview on click",
+        "thumbnail opens larger image",
+        "previewURL vs webformatURL"
+      ],
+      "responses": [
+        "Use `<img (click)=\"detailImage(im)\" src=\"{{im.previewURL}}\">` and in the handler set the `currentImage` to the clicked object, then switch the view to show `currentImage.webformatURL` or `userImageURL` as needed."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_security",
+      "patterns": [
+        "How to secure Angular app",
+        "Prevent XSS in Angular",
+        "Sanitize HTML"
+      ],
+      "responses": [
+        "Angular automatically sanitizes data bound into the DOM. Avoid using `innerHTML` with unsanitized content, or use `DomSanitizer` with caution. Protect backend APIs with proper auth and validation."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_forms_files",
+      "patterns": [
+        "How to upload files in form",
+        "File input in Angular form",
+        "Handle file uploads"
+      ],
+      "responses": [
+        "Use `<input type=\"file\" (change)=\"onFileSelected($event)\">` and send the file using `FormData` in an HTTP POST: `formData.append('file', file)` then `this.http.post(url, formData)`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_local_storage",
+      "patterns": [
+        "How to store data locally",
+        "Use localStorage in Angular",
+        "Save token in localStorage"
+      ],
+      "responses": [
+        "Use `localStorage.setItem('token', jwt)` and `localStorage.getItem('token')`. For complex cases consider a service to abstract storage and secure sensitive info appropriately."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_linting",
+      "patterns": [
+        "How to lint Angular project",
+        "ng lint",
+        "ESLint in Angular"
+      ],
+      "responses": [
+        "Use `ng lint` (CLI configuration). Newer projects use ESLint with Angular schematics. Linting enforces code style and catches potential issues early."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_cicd",
+      "patterns": [
+        "How to add CI/CD",
+        "Continuous deployment Angular",
+        "Deploy pipeline for Angular"
+      ],
+      "responses": [
+        "Use CI/CD tools (GitHub Actions, GitLab CI, Jenkins) to run `npm install`, `ng build --prod`, run tests, then deploy the `dist` folder to hosting (Netlify, Firebase Hosting, Apache, Nginx)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "aot_vs_jit",
+      "patterns": [
+        "What is AOT",
+        "Ahead of Time compilation",
+        "JIT vs AOT differences"
+      ],
+      "responses": [
+        "AOT (Ahead-of-Time) compiles templates into JS at build time, reducing runtime compilation overhead and improving startup speed. JIT compiles in the browser during runtime (development). Production builds often use AOT."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "source_maps",
+      "patterns": [
+        "What are source maps",
+        "Enable source maps in build",
+        "Debug compiled TypeScript"
+      ],
+      "responses": [
+        "Source maps map compiled JS back to TypeScript sources so you can debug original code in the browser. CLI includes source maps by default in development builds."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "serve_port",
+      "patterns": [
+        "Change ng serve port",
+        "Run angular on port 4300",
+        "ng serve --port"
+      ],
+      "responses": [
+        "Run `ng serve --port 4300` to change the dev server port. You can also configure the port in `angular.json` serve options."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cors_issues",
+      "patterns": [
+        "I get CORS error",
+        "Cross origin request blocked",
+        "How to fix CORS"
+      ],
+      "responses": [
+        "CORS is a server-side policy. Enable CORS on the backend (add Access-Control-Allow-Origin header) or use a proxy during development (`proxy.conf.json`) to forward requests to the backend."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "proxy_conf",
+      "patterns": [
+        "How to configure proxy for API requests",
+        "proxy.conf.json example",
+        "Avoid CORS using proxy"
+      ],
+      "responses": [
+        "Create `proxy.conf.json` with `{ \"/api\": { \"target\": \"http://localhost:8080\", \"secure\": false } }` and run `ng serve --proxy-config proxy.conf.json` so requests to `/api` are proxied to the backend."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "common_errors_module_not_found",
+      "patterns": [
+        "Module not found error",
+        "Cannot find module app.module",
+        "How to fix module not found"
+      ],
+      "responses": [
+        "Check file paths and module imports. Ensure the module file exists and you exported/imported the module class correctly. Re-run `ng serve` after fixes."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "common_errors_component_not_declared",
+      "patterns": [
+        "component is not part of any NgModule",
+        "Component not declared error",
+        "How to declare component"
+      ],
+      "responses": [
+        "Add the component class to the `declarations` array in the module where it should be used (usually AppModule or a feature module)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "common_errors_ngmodel",
+      "patterns": [
+        "Can't bind to 'ngModel' since it isn't a known property",
+        "ngModel not a known property",
+        "ngModel unknown property error"
+      ],
+      "responses": [
+        "Import `FormsModule` from `@angular/forms` and add it to the module `imports` where the component using `ngModel` is declared."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "common_errors_provider_null",
+      "patterns": [
+        "No provider for XService",
+        "NullInjectorError No provider for",
+        "How to fix No provider for"
+      ],
+      "responses": [
+        "Provide the service either in `providers` of a module, use `@Injectable({ providedIn: 'root' })`, or add it to component `providers` if instance-per-component is required."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "common_errors_cannot_find_name",
+      "patterns": [
+        "Cannot find name 'HttpClient'",
+        "Cannot find name tslint error",
+        "TypeScript cannot find name"
+      ],
+      "responses": [
+        "Ensure you imported the correct symbol at the top of the file (e.g. `import { HttpClient } from '@angular/common/http';`). Also install typings if needed and check `tsconfig.json`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "debug_ng_serve_errors",
+      "patterns": [
+        "ng serve throws error",
+        "Compilation error during ng serve",
+        "How to debug ng serve"
+      ],
+      "responses": [
+        "Read the error stack in the terminal; it usually contains file and line numbers. Fix TypeScript or import errors. Sometimes deleting `node_modules` and re-running `npm install` helps."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "rxjs_version_compat",
+      "patterns": [
+        "rxjs version issues",
+        "rxjs pipe not a function",
+        "rxjs compatibility"
+      ],
+      "responses": [
+        "RxJS API changed between major versions. If operators like `map` are missing, ensure you're using `import { map } from 'rxjs/operators'` and using `.pipe(map(...))` instead of chaining map directly."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_upgrade_issues",
+      "patterns": [
+        "After upgrade app breaks",
+        "Angular update breaking changes",
+        "ng update errors"
+      ],
+      "responses": [
+        "Check Angular Update Guide for upgrade steps and breaking changes. Update CLI, types, and fix deprecated APIs indicated by compiler errors or warnings."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "formatting_code",
+      "patterns": [
+        "How to format code",
+        "Prettier or tslint",
+        "Use code formatter"
+      ],
+      "responses": [
+        "Use a formatter like Prettier or ESLint with formatting rules. Configure editor settings to auto-format on save for consistent code style."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_performance",
+      "patterns": [
+        "How to optimize Angular performance",
+        "Improve Angular speed",
+        "Lazy load reduce bundle size"
+      ],
+      "responses": [
+        "Use lazy loading for feature modules, AOT compilation, tree-shaking, minimize third-party libraries, and use `OnPush` change detection strategy for performance-critical components."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "change_detection",
+      "patterns": [
+        "What is change detection",
+        "OnPush strategy",
+        "How Angular updates templates"
+      ],
+      "responses": [
+        "Angular's change detection checks component state and updates the DOM. Default strategy checks all bindings; `OnPush` runs checks only when input references change, improving performance when used correctly."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "i18n",
+      "patterns": [
+        "How to internationalize Angular app",
+        "Angular i18n",
+        "Translate app text"
+      ],
+      "responses": [
+        "Angular supports i18n by extracting strings and building localized versions. Many teams use libraries like ngx-translate for runtime translation and more flexible workflows."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "gitignore_dist",
+      "patterns": [
+        "Should I add dist to gitignore",
+        "dist folder in Angular repository",
+        "Commit dist or not"
+      ],
+      "responses": [
+        "Usually you should add `dist/` to `.gitignore` and generate it during CI/CD. Only commit built assets to specific branches if required by your hosting strategy."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "seo_ssr",
+      "patterns": [
+        "How to do server side rendering",
+        "Angular Universal",
+        "SEO for Angular SPA"
+      ],
+      "responses": [
+        "Use Angular Universal for server-side rendering (SSR) which pre-renders pages on the server for better SEO and faster perceived load times."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_ionic",
+      "patterns": [
+        "Use Ionic with Angular",
+        "Build mobile app with Ionic",
+        "Ionic Angular integration"
+      ],
+      "responses": [
+        "Ionic is a mobile UI toolkit that integrates with Angular to build hybrid mobile apps using web technologies and Angular components."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_cli_configuration",
+      "patterns": [
+        "Where to change CLI settings",
+        "angular.json what is it",
+        "Configure assets and styles"
+      ],
+      "responses": [
+        "`angular.json` holds build and serve configurations, asset and style entries, and environment configurations. Update it to include global styles, scripts, and build options."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "environment_files",
+      "patterns": [
+        "What are environment files",
+        "environment.ts vs environment.prod.ts",
+        "Use environment variables in Angular"
+      ],
+      "responses": [
+        "Use `environment.ts` for dev settings and `environment.prod.ts` for production. The CLI replaces files during production builds. Import `environment` to read variables like API endpoints."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "assets_images",
+      "patterns": [
+        "Where to store images",
+        "assets folder usage",
+        "Serve static images"
+      ],
+      "responses": [
+        "Place static images and files in the `src/assets` folder. Reference them in templates as `/assets/my-image.png` or via Angular asset configuration."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_troubleshoot_compilation",
+      "patterns": [
+        "Unexpected token or syntax error in template",
+        "Template parse errors",
+        "Template compilation error"
+      ],
+      "responses": [
+        "Template parse errors often mean invalid HTML syntax or incorrect binding expressions. Check for missing brackets, wrong property names, or invalid structural directive placements."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "observables_hot_cold",
+      "patterns": [
+        "Hot vs cold observable",
+        "What is difference between hot and cold",
+        "Share operator usage"
+      ],
+      "responses": [
+        "Cold Observables start producing values for each subscriber. Hot Observables produce regardless of subscriptions (e.g., a shared subject). Use `share()` or `shareReplay()` to multicast values."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "module_for_root",
+      "patterns": [
+        "What is forRoot pattern",
+        "Module.forRoot explanation",
+        "Singleton service via forRoot"
+      ],
+      "responses": [
+        "The `forRoot()` pattern provides providers needed once for the app (usually singleton services). Feature modules import a module without `forRoot()` to avoid duplicating providers."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_cli_add",
+      "patterns": [
+        "What does ng add do",
+        "ng add schematic",
+        "Add library to project"
+      ],
+      "responses": [
+        "`ng add` installs and configures libraries via schematics. For example `ng add @angular/material` installs Material and updates project files automatically."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_http_security",
+      "patterns": [
+        "How to protect backend from Angular",
+        "Validate input on server",
+        "Security best practices"
+      ],
+      "responses": [
+        "Always validate and sanitize input on the backend, authenticate requests, implement authorization checks and rate limiting. Client-side checks are helpful UX but not a substitute for server-side validation."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_post_example",
+      "patterns": [
+        "How to send a POST request",
+        "http post example",
+        "saveTask example"
+      ],
+      "responses": [
+        "Use `this.http.post(this.host + '/tasks', task)` with `HttpClient`. It returns an Observable; subscribe to handle response or errors. Provide headers if needed."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "file_upload_backend",
+      "patterns": [
+        "How to send images to backend",
+        "Upload photo contact",
+        "multipart form data in angular"
+      ],
+      "responses": [
+        "Use `FormData` to append file and other fields: `formData.append('photo', file)` and send via `http.post('/upload', formData)`; backend should accept multipart/form-data."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contact_app_delete",
+      "patterns": [
+        "How does delete contact work",
+        "deleteContact method example",
+        "Remove contact from list"
+      ],
+      "responses": [
+        "Call DELETE on the backend: `this.contactService.deleteContact(id).subscribe(() => this.ngOnInit());` to refresh the list after removal."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "rxjs_switchmap_usecase",
+      "patterns": [
+        "When to use switchMap",
+        "difference between switchMap and mergeMap",
+        "switchMap example"
+      ],
+      "responses": [
+        "`switchMap` maps to a new Observable and cancels previous ones—useful for search inputs where only the latest request matters. `mergeMap` keeps all subscriptions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_upgrade_notes",
+      "patterns": [
+        "Are Angular 4 and Angular 6 very different",
+        "Angular 2 vs 4 vs 6",
+        "Which Angular versions are updates of 2"
+      ],
+      "responses": [
+        "Angular 4, 5, 6 are iterative improvements on Angular 2 with performance and tooling updates. The core concepts (components, modules, DI) remain consistent across these versions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_response_observe",
+      "patterns": [
+        "Observe response headers",
+        "this.http.post(...,{observe:'response'})",
+        "Get headers from response"
+      ],
+      "responses": [
+        "Use option `{ observe: 'response' }` to receive the full `HttpResponse` object from `HttpClient` and read headers such as Authorization or custom headers via `resp.headers.get('Authorization')`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contact_newcomponent_flow",
+      "patterns": [
+        "How new contact submit works",
+        "saveContact flow",
+        "NewContactComponent example"
+      ],
+      "responses": [
+        "The component collects form data into a `contact` object and calls `contactService.saveContact(contact).subscribe(data => { this.mode='confirm'; this.contact = data; });` to save and show confirmation."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "detail_component_route_snapshot",
+      "patterns": [
+        "ActivatedRoute snapshot explanation",
+        "Get params using route.snapshot",
+        "snapshot vs subscribe to params"
+      ],
+      "responses": [
+        "`route.snapshot.params['id']` gives route params at initialization. For param changes while component is active, subscribe to `route.params` observable instead."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "images_class_circle",
+      "patterns": [
+        "How to show circular user image",
+        "img-circle class usage",
+        "userImageURL circle"
+      ],
+      "responses": [
+        "Use CSS `.img-circle` with `border-radius: 50%` or Bootstrap's rounded-circle class for circular images; use the URL provided by backend `userImageURL`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contacts_pagination",
+      "patterns": [
+        "How to implement server-side pagination",
+        "contacts pagination example",
+        "page size and total pages"
+      ],
+      "responses": [
+        "Backend should return total item count and current page items. Compute `totalPages = Math.ceil(totalHits / pageSize)` and request pages with `?page=` and `?per_page=` parameters."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "contacts_confirm_mode",
+      "patterns": [
+        "New contact confirmation view",
+        "mode confirm in new contact component",
+        "Show confirmation after creating contact"
+      ],
+      "responses": [
+        "Switch `mode` from `'new'` to `'confirm'` after successful save and show read-only details with the returned `contact.id` and other fields."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "component_style_isolation",
+      "patterns": [
+        "Are component styles global",
+        "styleUrls scope",
+        "Emulated shadow DOM"
+      ],
+      "responses": [
+        "Component styles are encapsulated by default using emulated Shadow DOM (scoped). Use `ViewEncapsulation` settings to change behavior if needed."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "httpclient_old_map_warning",
+      "patterns": [
+        "map is not a function error",
+        "resp.json() map deprecation",
+        "Convert old Http code to HttpClient"
+      ],
+      "responses": [
+        "Old `@angular/http` required `.map(resp => resp.json())`. With `HttpClient`, it returns JSON by default—use typed returns `this.http.get<MyType[]>('/api')` and remove `.map(resp => resp.json())`."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "code_examples_request",
+      "patterns": [
+        "Show example of AppModule",
+        "app.module.ts example code",
+        "main.ts bootstrap example"
+      ],
+      "responses": [
+        "Example AppModule:\n```ts\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\nimport { AppComponent } from './app.component';\n@NgModule({ declarations:[AppComponent], imports:[BrowserModule], bootstrap:[AppComponent] })\nexport class AppModule {}\n```"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "angular_best_practices",
+      "patterns": [
+        "Angular best practices",
+        "How to structure Angular app",
+        "Coding standards for Angular"
+      ],
+      "responses": [
+        "Use feature modules, strong typing, services for logic, keep components focused on view, use reactive forms for complex forms, lazy load routes, and write unit tests for critical logic."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ask_for_more_examples",
+      "patterns": [
+        "Give me more examples",
+        "Show code snippets",
+        "More Angular code please"
+      ],
+      "responses": [
+        "Tell me which topic you'd like more examples for: Components, Services, Routing, HttpClient, Forms, or Observables and I'll provide code snippets."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks for the help"
+      ],
+      "responses": [
+        "Happy to help!",
+        "You're welcome — glad it helped."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you!",
+        "Good luck with your Angular project!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "no_answer",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        "Sorry, I didn't understand that. Can you rephrase or ask about a specific Angular topic (components, services, routing, forms, http)?"
+      ],
+      "context": [""]
+    }
+  ]
+}
