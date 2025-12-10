@@ -1,5 +1,5 @@
 - The project requires you to have some knowledge of Python, install python version between 3.10 and 3.14
-then we will use some helping modules which you can download using the python-pip command or wmdline directly.
+then we will use some helping modules which you can download using the python-pip command or Command line directly.
 - pip install tensorflow 
 - pip install keras 
 - pip install pickle
