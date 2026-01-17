@@ -6,7 +6,7 @@ then we will use some helping modules which you can download using the python-pi
 - pip install nltk
 - pip install flask
 - Bear in mind :
-// the file data.json can be modified or improved as you want you can include any kind of data you want,
+// the file data.json can be modified or improved as you want, you can include any kind of data you want,
 // here I'm using data about angular you can ask any question about angular and get your answer.
 - After all this run the training.py file to generate the modele.h5, labels.pkl and texts.pkl
 then move to run the app.py and open the link given in the terminal that appears like this
